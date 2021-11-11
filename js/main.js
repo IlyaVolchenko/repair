@@ -1,7 +1,9 @@
 $(function(){
   
 $('.slider__innet').slick({
-   dots: true
+   dots: false,
+  autoplay: true,
+  autoplaySpeed: 2000,
 });
 });
 

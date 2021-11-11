@@ -30,6 +30,7 @@
     border-radius: 25px;
     width: 170px;
     background-color: #fff;
+    border: 1px solid #000;
   }
 
   &__contacts {
@@ -198,12 +199,12 @@
     display: block;
     width: 300px;
     margin-left: 43px;
-    box-shadow: 8px 10px 12px #000;
+    box-shadow: 8px 10px 12px #ccc;
     position: relative;
     transition: all .4s;
 
     &:hover {
-      box-shadow: 8px 10px 12px #ccc;
+      box-shadow: 8px 10px 12px #4d5671;
     }
   }
 
@@ -215,7 +216,11 @@
 }
 
 .slider {
-  padding: 40px 0 0 0;
+  padding: 70px 0 40px 0;
+  &__inner{
+    width: 1400px;
+    height: 700px;
+  }
 }
 
 .slick-dots {

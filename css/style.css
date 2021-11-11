@@ -96,6 +96,7 @@ body {
   border-radius: 25px;
   width: 170px;
   background-color: #fff;
+  border: 1px solid #000;
 }
 
 .header__contacts {
@@ -280,16 +281,16 @@ body {
   display: block;
   width: 300px;
   margin-left: 43px;
-  -webkit-box-shadow: 8px 10px 12px #000;
-          box-shadow: 8px 10px 12px #000;
+  -webkit-box-shadow: 8px 10px 12px #ccc;
+          box-shadow: 8px 10px 12px #ccc;
   position: relative;
   -webkit-transition: all .4s;
   transition: all .4s;
 }
 
 .portfolio__img:hover {
-  -webkit-box-shadow: 8px 10px 12px #ccc;
-          box-shadow: 8px 10px 12px #ccc;
+  -webkit-box-shadow: 8px 10px 12px #4d5671;
+          box-shadow: 8px 10px 12px #4d5671;
 }
 
 .portfolio__loupe {
@@ -299,7 +300,12 @@ body {
 }
 
 .slider {
-  padding: 40px 0 0 0;
+  padding: 70px 0 40px 0;
+}
+
+.slider__inner {
+  width: 1400px;
+  height: 700px;
 }
 
 .slick-dots {
