@@ -5,100 +5,35 @@
 
 
 .header {
-  padding-top: 40px;
-  background-image: url('../images/h-fon.jpg');
-  background-repeat: no-repeat;
-  background-position: center bottom;
-  background-size: cover;
-  height: 800px;
+  &__top {
+    background-color: #F4F4F4;
+    padding: 4px 0;
 
-  &__inner {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  // &__logo-link {}
-
-  &__text {
-    color: #000;
-    font-size: 28px;
-    margin-bottom: 10px;
-    display: inline-block;
-    text-align: center;
-    padding: 15px 20px;
-    border-radius: 25px;
-    width: 170px;
-    background-color: #fff;
-    border: 1px solid #000;
-  }
-
-  &__contacts {
-    margin-top: 8px;
-
-    &-item {
+    &-inner {
       display: flex;
       justify-content: center;
-      flex-direction: column;
-      text-align: center;
-    }
-
-    &-items {
-      display: flex;
-      margin-bottom: 10px;
-      justify-content: center;
-    }
-
-    &-text {
-      font-size: 23px;
-      margin-right: 10px;
-      color: #922dde;
-
-      &__whatsapp {
-        color: #2fbe40;
-        margin-left: 10px;
-      }
-    }
-
-    &-podtext {
-      text-align: center;
-      font-size: 16px;
-      margin-top: 8px;
+      align-items: center;
     }
 
     &-link {
+      font-size: 12px;
+      color: #AAAAAA;
+      letter-spacing: 1px;
       text-transform: uppercase;
-      color: #fff;
-      font-size: 21px;
+      line-height: 33px;
     }
   }
 
-  &__span {
-    display: block;
-    text-align: center;
-    font-size: 25px;
-    margin-bottom: 10px;
+  &__bottom {
+    padding: 25px 0;
+    border: 1px solid #E0E0E0;
+
+    &-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
   }
-}
-
-.header-one {
-  font-size: 33px;
-}
-
-.header-two {
-  font-size: 35px;
-}
-
-.header-three {
-  font-size: 18px;
-}
-
-.header-four {
-  font-size: 35px;
-}
-
-.header__page {
-  margin-left: 14px;
 }
 
 .menu {
@@ -111,20 +46,24 @@
   }
 
   &__link {
-    font-size: 25px;
-    color: #000;
+    color: #000000;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
   }
 }
 
 .btn {
   cursor: pointer;
   border: none;
-  padding: 15px 20px;
+  padding: 8px 15px;
   border-radius: 20px;
   color: #000;
   background-color: #fff;
   transition: all .3s;
-  font-size: 24px;
+  font-size: 23px;
+  border: 1px solid #000;
 
   &:hover {
     color: #fff;
@@ -177,15 +116,37 @@
   transition: opacity 0.7s;
 }
 
+.about {
+  padding: 49px 0 80px;
+
+  &__inner {
+    padding: 80px 0 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  &__title {
+    font-size: 48px;
+    line-height: 58px;
+    width: 355px;
+  }
+
+  &__text {
+    font-size: 24px;
+    line-height: 40px;
+    color: #AAAAAA;
+    width: 569px;
+  }
+}
+
 .portfolio {
-
-
   &__title {
     color: #000;
     font-size: 40px;
     text-align: center;
     margin-bottom: 60px;
-    padding-top: 50px;
+    padding-top: 45px;
   }
 
   &__inner {
@@ -198,6 +159,7 @@
   &__img {
     display: block;
     width: 300px;
+    height: 400px;
     margin-left: 43px;
     box-shadow: 8px 10px 12px #ccc;
     position: relative;
@@ -211,16 +173,12 @@
   &__loupe {
     display: inline-block;
     position: absolute;
-    margin: -30px 0 0 300px;
+    margin: -45px 0 0 300px;
   }
 }
 
 .slider {
   padding: 70px 0 40px 0;
-  &__inner{
-    width: 1400px;
-    height: 700px;
-  }
 }
 
 .slick-dots {
@@ -271,43 +229,8 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.info {
-  padding-top: 100px;
-
-  &__inner {
-    margin-top: -200px;
-    position: relative;
-    border-radius: 10px;
-    display: block;
-    align-items: center;
-    background-color: #4d5671;
-    padding: 20px 50px;
-    // background-image: url('../images/info-fon.jpg');
-    // background-repeat: no-repeat;
-    // background-position: center bottom;
-    // background-size: cover;
-  }
-
-  &__content {
-    padding: 20px 0 0 15px;
-    width: 100%;
-    margin-right: 20px;
-    text-align: left;
-
-    &-two {
-      margin: 0 0 0 20px;
-    }
-  }
-
-  &__text {
-    font-size: 23px;
-    line-height: 30px;
-    margin-bottom: 20px;
-  }
-}
-
 .footer {
-  background-color: #4d5671;
+  background-color: #000;
   padding: 50px 0;
 
   &__inner {
