@@ -1,9 +1,12 @@
 $(function(){
   
-$('.slider__innet').slick({
+$('.options__inner').slick({
    dots: false,
    arrows: false,
   autoplay: true,
+  infinite: true,
+  slidesToShow: 4,
+  slidesToScroll: 2,
   autoplaySpeed: 2000,
 });
 });

@@ -15,54 +15,33 @@
 <body>
 
   <header class="header">
-    <div class="header__top">
-      <div class="container">
-        <div class="header__top-inner">
-          <a class="header__top-link" href="tel:89041370078">TEL + 8 (904) 137-00-78</a>
-        </div>
-      </div>
-    </div>
-    <div class="header__bottom">
-      <div class="container">
-        <div class="header__bottom-inner">
-          <a class="header__bottom-link" href='#'>
-            <img src="images/header__logo.svg" alt="logo">
-          </a>
+    <div class="container">
+      <div class="header__inner">
 
-          <nav class="menu">
-            <ul class="menu__list">
-              <li class="menu__list-item">
-                <a class="menu__link" href="#">Products</a>
-              </li>
-              <li class="menu__list-item">
-                <a class="menu__link" href="#">Explore</a>
-              </li>
-              <li class="menu__list-item">
-                <a class="menu__link" href="#">Shop</a>
-              </li>
-            </ul>
-          </nav>
+        <a class="header__logo" href="#">
+          <p class="header__logo-text">Ремонт квартир</p>
+          <img class="header__img" src="images/h-logo.png" alt="logo">
+        </a>
 
+        <div class="header__contact">
+          <img class="header__img" src="images/h-iconv.png" alt="icon">
+          <img class="header__img" src="images/h-iconw.png" alt="icon">
+          <a class="header__link-tel" href="tel:+89041370078">+ 8 (904) <b>137-00-78</b></a>
           <div class="wrap">
-            <div class="btn">Контакты</div>
+            <div class="btn">Заказать звонок</div>
           </div>
-
         </div>
+
       </div>
       <div class="modal">
-        <div class="header__contacts">
-          <div class="header__contacts-item">
-            <div class="header__contacts-items">
-              <p class="header__contacts-text header-one header__page">Viber</p>
-              <p class="header__contacts-text header-one header__contacts-text__whatsapp">WhatsApp</p>
-            </div>
-            <span class="header__span header-four">
-              Анатолий
-            </span>
-            <a class="header__contacts-link header-two" href="tel:+89041370078">+ 8 (904) 137-00-78</a>
-            <p class="header__contacts-podtext header-three">10.00 до 22.00</p>
-          </div>
-        </div>
+        <p class="modal__text">Укажите Ваше имя и телефон – мы свяжемся с Вами, чтобы обсудить все интересующие Вас
+          вопросы</p>
+        <form class="form" action="#">
+          <input class="input" type="text" placeholder="Ваше имя*">
+          <!-- Стилизовать tel -->
+          <input class="input" id="phone" name="phone" type="tel" placeholder="Номер телефона*">
+          <input class="input__submit" type="submit" value="Отправить заявку">
+        </form>
       </div>
       <div class="modal__bg"></div>
     </div>
@@ -70,52 +49,162 @@
 
   <section class="about">
     <div class="container">
-      <div class="about__images">
-        <img src="images/b-fon.jpg" alt="fon">
+      <div class="about__top">
+        <!-- Сделать всплывающее меню и опознователи -->
+        <nav class="menu">
+          <ul class="menu__list">
+            <li class="menu__list-item">
+              <a class="menu__link" href="#">Улуги</a>
+            </li>
+            <li class="menu__list-item">
+              <a class="menu__link" href="#">О компании</a>
+            </li>
+            <li class="menu__list-item">
+              <a class="menu__link" href="#">Портфолио</a>
+            </li>
+            <li class="menu__list-item">
+              <a class="menu__link" href="#">Контакты</a>
+            </li>
+          </ul>
+        </nav>
       </div>
-      <div class="about__inner">
-        <h1 class="about__title">Design that inspires a better way to work.</h1>
-        <p class="about__text">We've developed a series of purpose-built rooms that offer companies looking for change
-          an affordable, sustainable, and flexible alternative to fixed construction and traditional office design.</p>
-      </div>
-    </div>
-  </section>
-
-<!-- Здесь будет портфолио -->
-
- <section class="slider">
-    <div class="container">
-      <div class="slider__innet">
-        <img class="slider__img" src="images/slider/1.jpg" alt="images slider">
-        <img class="slider__img" src="images/slider/1.jpg" alt="images slider">
-        <img class="slider__img" src="images/slider/1.jpg" alt="images slider">
-        <img class="slider__img" src="images/slider/1.jpg" alt="images slider">
-        <img class="slider__img" src="images/slider/1.jpg" alt="images slider">
-        <img class="slider__img" src="images/slider/1.jpg" alt="images slider">
-        <img class="slider__img" src="images/slider/1.jpg" alt="images slider">
-      </div>
-    </div>
-  </section>
-
-  <footer class="footer">
-    <div class="container">
-      <div class="footer__inner">
-
-        <div class="header__contacts">
-          <div class="header__contacts-item">
-            <span class="header__span">
-              Анатолий
-            </span>
-            <a class="header__contacts-link" href="tel:+89041370078">+ 8 (904) 137-00-78</a>
-            <p class="header__contacts-podtext">10.00 до 22.00</p>
-          </div>
+      <div class="about__bottom">
+        <div class="about__bottom-item">
+          <h1 class="about__title">РЕМОНТ КВАРТИР В ИРКУТСКЕ</h1>
+          <p class="about__text">- Ремонт любой сложности и на любой вкус</p>
+          <p class="about__text">- Гарантия</p>
+          <p class="about__text">- Акции!</p>
         </div>
-
+        <div class="about__bottom-items">
+          <p class="modal__text modal__text-page"> <span class="modal__span">ОСТАВЬТЕ ЗАЯВКУ </span> <br>
+            на расчет стоимости ремонта</p>
+          <form class="form" action="#">
+            <input class="input" type="text" placeholder="Ваше имя*">
+            <!-- Стилизовать tel -->
+            <input class="input" id="phone" name="phone" type="tel" placeholder="Номер телефона*">
+            <input class="input__submit" type="submit" value="Отправить заявку">
+          </form>
+        </div>
       </div>
     </div>
-  </footer> 
+  </section>
 
+  <div class="options">
+    <div class="container">
+      <div class="options__inner">
+        <div class="options__item">
+          <?xml version="1.0" ?><svg fill="none" height="64" viewBox="0 0 64 64" width="64"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M31.205 14.728C31.6914 14.424 32.3086 14.424 32.795 14.728L48.795 24.728C49.4975 25.1671 49.7111 26.0925 49.272 26.795C48.8329 27.4975 47.9075 27.7111 47.205 27.272L32 17.7689L16.795 27.272C16.0925 27.7111 15.1671 27.4975 14.728 26.795C14.2889 26.0925 14.5025 25.1671 15.205 24.728L31.205 14.728Z"
+              fill="#fff" />
+            <path clip-rule="evenodd"
+              d="M18.5 27.9752V45C18.5 47.4853 20.5147 49.5 23 49.5H41C43.4853 49.5 45.5 47.4853 45.5 45V27.9752L42.5 26.1002V45C42.5 45.8284 41.8284 46.5 41 46.5H37.5V38C37.5 37.1716 36.8284 36.5 36 36.5H28C27.1716 36.5 26.5 37.1716 26.5 38V46.5H23C22.1716 46.5 21.5 45.8284 21.5 45V26.1002L18.5 27.9752ZM29.5 46.5H34.5V39.5H29.5V46.5Z"
+              fill="#fff" fill-rule="evenodd" /></svg>
+          <div class="options__text">Ремонт квартир</div>
+        </div>
+        <div class="options__item">
+          <?xml version="1.0" ?><svg fill="none" height="64" viewBox="0 0 64 64" width="64"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M31.205 14.728C31.6914 14.424 32.3086 14.424 32.795 14.728L48.795 24.728C49.4975 25.1671 49.7111 26.0925 49.272 26.795C48.8329 27.4975 47.9075 27.7111 47.205 27.272L32 17.7689L16.795 27.272C16.0925 27.7111 15.1671 27.4975 14.728 26.795C14.2889 26.0925 14.5025 25.1671 15.205 24.728L31.205 14.728Z"
+              fill="#fff" />
+            <path clip-rule="evenodd"
+              d="M18.5 27.9752V45C18.5 47.4853 20.5147 49.5 23 49.5H41C43.4853 49.5 45.5 47.4853 45.5 45V27.9752L42.5 26.1002V45C42.5 45.8284 41.8284 46.5 41 46.5H37.5V38C37.5 37.1716 36.8284 36.5 36 36.5H28C27.1716 36.5 26.5 37.1716 26.5 38V46.5H23C22.1716 46.5 21.5 45.8284 21.5 45V26.1002L18.5 27.9752ZM29.5 46.5H34.5V39.5H29.5V46.5Z"
+              fill="#fff" fill-rule="evenodd" /></svg>
+          <div class="options__text">Ремонт комнат</div>
+        </div>
+        <div class="options__item">
+          <?xml version="1.0" ?><svg fill="none" height="64" viewBox="0 0 64 64" width="64"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M31.205 14.728C31.6914 14.424 32.3086 14.424 32.795 14.728L48.795 24.728C49.4975 25.1671 49.7111 26.0925 49.272 26.795C48.8329 27.4975 47.9075 27.7111 47.205 27.272L32 17.7689L16.795 27.272C16.0925 27.7111 15.1671 27.4975 14.728 26.795C14.2889 26.0925 14.5025 25.1671 15.205 24.728L31.205 14.728Z"
+              fill="#fff" />
+            <path clip-rule="evenodd"
+              d="M18.5 27.9752V45C18.5 47.4853 20.5147 49.5 23 49.5H41C43.4853 49.5 45.5 47.4853 45.5 45V27.9752L42.5 26.1002V45C42.5 45.8284 41.8284 46.5 41 46.5H37.5V38C37.5 37.1716 36.8284 36.5 36 36.5H28C27.1716 36.5 26.5 37.1716 26.5 38V46.5H23C22.1716 46.5 21.5 45.8284 21.5 45V26.1002L18.5 27.9752ZM29.5 46.5H34.5V39.5H29.5V46.5Z"
+              fill="#fff" fill-rule="evenodd" /></svg>
+          <div class="options__text">Планировка</div>
+        </div>
+        <div class="options__item">
+          <?xml version="1.0" ?><svg fill="none" height="64" viewBox="0 0 64 64" width="64"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M31.205 14.728C31.6914 14.424 32.3086 14.424 32.795 14.728L48.795 24.728C49.4975 25.1671 49.7111 26.0925 49.272 26.795C48.8329 27.4975 47.9075 27.7111 47.205 27.272L32 17.7689L16.795 27.272C16.0925 27.7111 15.1671 27.4975 14.728 26.795C14.2889 26.0925 14.5025 25.1671 15.205 24.728L31.205 14.728Z"
+              fill="#fff" />
+            <path clip-rule="evenodd"
+              d="M18.5 27.9752V45C18.5 47.4853 20.5147 49.5 23 49.5H41C43.4853 49.5 45.5 47.4853 45.5 45V27.9752L42.5 26.1002V45C42.5 45.8284 41.8284 46.5 41 46.5H37.5V38C37.5 37.1716 36.8284 36.5 36 36.5H28C27.1716 36.5 26.5 37.1716 26.5 38V46.5H23C22.1716 46.5 21.5 45.8284 21.5 45V26.1002L18.5 27.9752ZM29.5 46.5H34.5V39.5H29.5V46.5Z"
+              fill="#fff" fill-rule="evenodd" /></svg>
+          <div class="options__text">Ремонт офисов</div>
+        </div>
+        <div class="options__item">
+          <?xml version="1.0" ?><svg fill="none" height="64" viewBox="0 0 64 64" width="64"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M31.205 14.728C31.6914 14.424 32.3086 14.424 32.795 14.728L48.795 24.728C49.4975 25.1671 49.7111 26.0925 49.272 26.795C48.8329 27.4975 47.9075 27.7111 47.205 27.272L32 17.7689L16.795 27.272C16.0925 27.7111 15.1671 27.4975 14.728 26.795C14.2889 26.0925 14.5025 25.1671 15.205 24.728L31.205 14.728Z"
+              fill="#fff" />
+            <path clip-rule="evenodd"
+              d="M18.5 27.9752V45C18.5 47.4853 20.5147 49.5 23 49.5H41C43.4853 49.5 45.5 47.4853 45.5 45V27.9752L42.5 26.1002V45C42.5 45.8284 41.8284 46.5 41 46.5H37.5V38C37.5 37.1716 36.8284 36.5 36 36.5H28C27.1716 36.5 26.5 37.1716 26.5 38V46.5H23C22.1716 46.5 21.5 45.8284 21.5 45V26.1002L18.5 27.9752ZM29.5 46.5H34.5V39.5H29.5V46.5Z"
+              fill="#fff" fill-rule="evenodd" /></svg>
+          <div class="options__text">Электоромонтажные работы</div>
+        </div>
+        <div class="options__item">
+          <?xml version="1.0" ?><svg fill="none" height="64" viewBox="0 0 64 64" width="64"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M31.205 14.728C31.6914 14.424 32.3086 14.424 32.795 14.728L48.795 24.728C49.4975 25.1671 49.7111 26.0925 49.272 26.795C48.8329 27.4975 47.9075 27.7111 47.205 27.272L32 17.7689L16.795 27.272C16.0925 27.7111 15.1671 27.4975 14.728 26.795C14.2889 26.0925 14.5025 25.1671 15.205 24.728L31.205 14.728Z"
+              fill="#fff" />
+            <path clip-rule="evenodd"
+              d="M18.5 27.9752V45C18.5 47.4853 20.5147 49.5 23 49.5H41C43.4853 49.5 45.5 47.4853 45.5 45V27.9752L42.5 26.1002V45C42.5 45.8284 41.8284 46.5 41 46.5H37.5V38C37.5 37.1716 36.8284 36.5 36 36.5H28C27.1716 36.5 26.5 37.1716 26.5 38V46.5H23C22.1716 46.5 21.5 45.8284 21.5 45V26.1002L18.5 27.9752ZM29.5 46.5H34.5V39.5H29.5V46.5Z"
+              fill="#fff" fill-rule="evenodd" /></svg>
+          <div class="options__text">Облицовка и отделка кафелем</div>
+        </div>
+        <div class="options__item">
+          <?xml version="1.0" ?><svg fill="none" height="64" viewBox="0 0 64 64" width="64"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M31.205 14.728C31.6914 14.424 32.3086 14.424 32.795 14.728L48.795 24.728C49.4975 25.1671 49.7111 26.0925 49.272 26.795C48.8329 27.4975 47.9075 27.7111 47.205 27.272L32 17.7689L16.795 27.272C16.0925 27.7111 15.1671 27.4975 14.728 26.795C14.2889 26.0925 14.5025 25.1671 15.205 24.728L31.205 14.728Z"
+              fill="#fff" />
+            <path clip-rule="evenodd"
+              d="M18.5 27.9752V45C18.5 47.4853 20.5147 49.5 23 49.5H41C43.4853 49.5 45.5 47.4853 45.5 45V27.9752L42.5 26.1002V45C42.5 45.8284 41.8284 46.5 41 46.5H37.5V38C37.5 37.1716 36.8284 36.5 36 36.5H28C27.1716 36.5 26.5 37.1716 26.5 38V46.5H23C22.1716 46.5 21.5 45.8284 21.5 45V26.1002L18.5 27.9752ZM29.5 46.5H34.5V39.5H29.5V46.5Z"
+              fill="#fff" fill-rule="evenodd" /></svg>
+          <div class="options__text">Сантехнические работы</div>
+        </div>
+        <div class="options__item">
+          <?xml version="1.0" ?><svg fill="none" height="64" viewBox="0 0 64 64" width="64"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M31.205 14.728C31.6914 14.424 32.3086 14.424 32.795 14.728L48.795 24.728C49.4975 25.1671 49.7111 26.0925 49.272 26.795C48.8329 27.4975 47.9075 27.7111 47.205 27.272L32 17.7689L16.795 27.272C16.0925 27.7111 15.1671 27.4975 14.728 26.795C14.2889 26.0925 14.5025 25.1671 15.205 24.728L31.205 14.728Z"
+              fill="#fff" />
+            <path clip-rule="evenodd"
+              d="M18.5 27.9752V45C18.5 47.4853 20.5147 49.5 23 49.5H41C43.4853 49.5 45.5 47.4853 45.5 45V27.9752L42.5 26.1002V45C42.5 45.8284 41.8284 46.5 41 46.5H37.5V38C37.5 37.1716 36.8284 36.5 36 36.5H28C27.1716 36.5 26.5 37.1716 26.5 38V46.5H23C22.1716 46.5 21.5 45.8284 21.5 45V26.1002L18.5 27.9752ZM29.5 46.5H34.5V39.5H29.5V46.5Z"
+              fill="#fff" fill-rule="evenodd" /></svg>
+          <div class="options__text">Перепланировка</div>
+        </div>
+      </div>
+    </div>
+  </div>
 
+  <section class="company">
+    <div class="container">
+      <div class="company__inner">
+        <div class="company__item">
+          <h2 class="company__title">О компании</h2>
+          <p class="company__text">Ремонт квартир – это работы, которые включают в себя черновую подготовку и финишную
+            отделку в студиях, квартирах с одной или несколькими комнатами, объектах со свободной планировкой. Доверить
+            такую задачу рекомендуется специалистам компании в "Текущий ремонт квартир": мы предлагаем отделку
+            жилых помещений точно в установленные сроки с предоставлением гарантии.</p>
+        </div>
+        <div class="company__video">
+          <a class="company__video-link" href="#">
+            <img src="" alt="">
+          </a>
+          <a class="company__video-link" href="#">
+            <img src="" alt="">
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="js/lightbox-plus-jquery.min.js"></script>
