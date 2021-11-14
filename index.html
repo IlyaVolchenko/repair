@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/fancybox.css">
   <link rel="stylesheet" href="css/lightbox.min.css">
   <link rel="stylesheet" href="css/slick-theme.css">
   <link rel="stylesheet" href="css/slick.css">
@@ -24,8 +25,10 @@
         </a>
 
         <div class="header__contact">
-          <img class="header__img" src="images/h-iconv.png" alt="icon">
-          <img class="header__img" src="images/h-iconw.png" alt="icon">
+          <div class="header__contact-images">
+            <img class="header__img" src="images/h-iconv.png" alt="icon">
+            <img class="header__img" src="images/h-iconw.png" alt="icon">
+          </div>
           <a class="header__link-tel" href="tel:+89041370078">+ 8 (904) <b>137-00-78</b></a>
           <div class="wrap">
             <div class="btn">Заказать звонок</div>
@@ -36,11 +39,11 @@
       <div class="modal">
         <p class="modal__text">Укажите Ваше имя и телефон – мы свяжемся с Вами, чтобы обсудить все интересующие Вас
           вопросы</p>
-        <form class="form" action="#">
-          <input class="input" type="text" placeholder="Ваше имя*">
+        <form class="form" action="telegram.php" method="POST">
+          <input class="input" type="text" id="" name="user_name" placeholder="Ваше имя*">
           <!-- Стилизовать tel -->
-          <input class="input" id="phone" name="phone" type="tel" placeholder="Номер телефона*">
-          <input class="input__submit" type="submit" value="Отправить заявку">
+          <input class="input" type="text" id="" name="user_phone" type="tel" placeholder="Номер телефона*">
+          <button class="input__submit" type="sumbit">Отправить заявку</button>
         </form>
       </div>
       <div class="modal__bg"></div>
@@ -50,23 +53,25 @@
   <section class="about">
     <div class="container">
       <div class="about__top">
-        <!-- Сделать всплывающее меню и опознователи -->
+
         <nav class="menu">
+          <button class="menu__btn"><img src="images/menu-btn.svg" alt="btn"></button>
           <ul class="menu__list">
             <li class="menu__list-item">
-              <a class="menu__link" href="#">Улуги</a>
+              <a class="menu__link" href="#services">Улуги</a>
             </li>
             <li class="menu__list-item">
-              <a class="menu__link" href="#">О компании</a>
+              <a class="menu__link" href="#about">О компании</a>
             </li>
             <li class="menu__list-item">
-              <a class="menu__link" href="#">Портфолио</a>
+              <a class="menu__link" href="#portfolio">Портфолио</a>
             </li>
             <li class="menu__list-item">
-              <a class="menu__link" href="#">Контакты</a>
+              <a class="menu__link" href="#contacts">Контакты</a>
             </li>
           </ul>
         </nav>
+
       </div>
       <div class="about__bottom">
         <div class="about__bottom-item">
@@ -78,18 +83,17 @@
         <div class="about__bottom-items">
           <p class="modal__text modal__text-page"> <span class="modal__span">ОСТАВЬТЕ ЗАЯВКУ </span> <br>
             на расчет стоимости ремонта</p>
-          <form class="form" action="#">
-            <input class="input" type="text" placeholder="Ваше имя*">
-            <!-- Стилизовать tel -->
-            <input class="input" id="phone" name="phone" type="tel" placeholder="Номер телефона*">
-            <input class="input__submit" type="submit" value="Отправить заявку">
+          <form class="form" action="telegram.php" method="POST">
+            <input class="input" type="text" id="" name="user_name" placeholder="Ваше имя*">
+            <input class="input" type="text" id="" name="user_phone" type="tel" placeholder="Номер телефона*">
+            <button class="input__submit" type="sumbit">Отправить заявку</button>
           </form>
         </div>
       </div>
     </div>
   </section>
 
-  <div class="options">
+  <div class="options" id="about">
     <div class="container">
       <div class="options__inner">
         <div class="options__item">
@@ -188,25 +192,212 @@
     <div class="container">
       <div class="company__inner">
         <div class="company__item">
-          <h2 class="company__title">О компании</h2>
+          <h2 class="company__title title">О компании</h2>
           <p class="company__text">Ремонт квартир – это работы, которые включают в себя черновую подготовку и финишную
             отделку в студиях, квартирах с одной или несколькими комнатами, объектах со свободной планировкой. Доверить
             такую задачу рекомендуется специалистам компании в "Текущий ремонт квартир": мы предлагаем отделку
             жилых помещений точно в установленные сроки с предоставлением гарантии.</p>
         </div>
         <div class="company__video">
-          <a class="company__video-link" href="#">
-            <img src="" alt="">
+          <div class="company__video-item">
+            <a class="company__video-link" href="https://www.youtube.com/watch?v=I8VLcELg65c" data-fancybox>
+              <img class="company__video-img" src="images/play.svg" alt="play">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="portfolio" id="portfolio">
+    <div class="container">
+      <h2 class="portfolio__title title">Виды работ</h2>
+      <div class="portfolio__inner">
+        <div class="portfolio__item">
+          <a class="portfolio__link portfolio__link-difference" data-lightbox="roadtrip" href="images/portfolio/1.jpg">
+            <img src="images/portfolio/1.jpg" alt="portfolio">
           </a>
-          <a class="company__video-link" href="#">
-            <img src="" alt="">
+        </div>
+        <div class="portfolio__item">
+          <a class="portfolio__link" data-lightbox="roadtrip" href="images/portfolio/2.jpg">
+            <img src="images/portfolio/2.jpg" alt="portfolio">
+          </a>
+        </div>
+        <div class="portfolio__item">
+          <a class="portfolio__link portfolio__link-difference" data-lightbox="roadtrip" href="images/portfolio/3.jpg">
+            <img src="images/portfolio/3.jpg" alt="portfolio">
+          </a>
+        </div>
+        <div class="portfolio__item">
+          <a class="portfolio__link" data-lightbox="roadtrip" href="images/portfolio/4.jpg">
+            <img src="images/portfolio/4.jpg" alt="portfolio">
+          </a>
+        </div>
+        <div class="portfolio__item">
+          <a class="portfolio__link" data-lightbox="roadtrip" href="images/portfolio/5.jpg">
+            <img src="images/portfolio/5.jpg" alt="portfolio">
+          </a>
+        </div>
+        <div class="portfolio__item">
+          <a class="portfolio__link" data-lightbox="roadtrip" href="images/portfolio/6.jpg">
+            <img src="images/portfolio/6.jpg" alt="portfolio">
+          </a>
+        </div>
+        <div class="portfolio__item">
+          <a class="portfolio__link" data-lightbox="roadtrip" href="images/portfolio/7.jpg">
+            <img src="images/portfolio/7.jpg" alt="portfolio">
+          </a>
+        </div>
+        <div class="portfolio__item">
+          <a class="portfolio__link" data-lightbox="roadtrip" href="images/portfolio/8.jpg">
+            <img src="images/portfolio/8.jpg" alt="portfolio">
+          </a>
+        </div>
+        <div class="portfolio__item">
+          <a class="portfolio__link" data-lightbox="roadtrip" href="images/portfolio/9.jpg">
+            <img src="images/portfolio/9.jpg" alt="portfolio">
+          </a>
+        </div>
+        <div class="portfolio__item">
+          <a class="portfolio__link" data-lightbox="roadtrip" href="images/portfolio/12.jpg">
+            <img src="images/portfolio/12.jpg" alt="portfolio">
           </a>
         </div>
       </div>
     </div>
   </section>
 
+  <section class="portfolio portfolio__page" id="portfolio">
+    <div class="container">
+      <h2 class="portfolio__title title">Виды работ</h2>
+      <div class="portfolio__inner-page">
+        <div class="portfolio__item">
+          <a class="portfolio__link portfolio__link-difference" data-lightbox="roadtrip" href="images/portfolio/1.jpg">
+            <img src="images/portfolio/1.jpg" alt="portfolio">
+          </a>
+        </div>
+        <div class="portfolio__item">
+          <a class="portfolio__link" data-lightbox="roadtrip" href="images/portfolio/2.jpg">
+            <img src="images/portfolio/2.jpg" alt="portfolio">
+          </a>
+        </div>
+        <div class="portfolio__item">
+          <a class="portfolio__link portfolio__link-difference" data-lightbox="roadtrip" href="images/portfolio/3.jpg">
+            <img src="images/portfolio/3.jpg" alt="portfolio">
+          </a>
+        </div>
+        <div class="portfolio__item">
+          <a class="portfolio__link" data-lightbox="roadtrip" href="images/portfolio/4.jpg">
+            <img src="images/portfolio/4.jpg" alt="portfolio">
+          </a>
+        </div>
+        <div class="portfolio__item">
+          <a class="portfolio__link" data-lightbox="roadtrip" href="images/portfolio/5.jpg">
+            <img src="images/portfolio/5.jpg" alt="portfolio">
+          </a>
+        </div>
+        <div class="portfolio__item">
+          <a class="portfolio__link" data-lightbox="roadtrip" href="images/portfolio/6.jpg">
+            <img src="images/portfolio/6.jpg" alt="portfolio">
+          </a>
+        </div>
+        <div class="portfolio__item">
+          <a class="portfolio__link" data-lightbox="roadtrip" href="images/portfolio/7.jpg">
+            <img src="images/portfolio/7.jpg" alt="portfolio">
+          </a>
+        </div>
+        <div class="portfolio__item">
+          <a class="portfolio__link" data-lightbox="roadtrip" href="images/portfolio/8.jpg">
+            <img src="images/portfolio/8.jpg" alt="portfolio">
+          </a>
+        </div>
+        <div class="portfolio__item">
+          <a class="portfolio__link" data-lightbox="roadtrip" href="images/portfolio/9.jpg">
+            <img src="images/portfolio/9.jpg" alt="portfolio">
+          </a>
+        </div>
+        <div class="portfolio__item">
+          <a class="portfolio__link" data-lightbox="roadtrip" href="images/portfolio/12.jpg">
+            <img src="images/portfolio/12.jpg" alt="portfolio">
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="services" id="services">
+    <div class="container"></div>
+  </section>
+
+  <section class="working">
+    <div class="container">
+      <h2 class="working__title title">Как мы работаем</h2>
+      <div class="working__inner">
+        <div class="working__item">
+          <p class="working__numbers">1</p>
+          <p class="working__text">Вы звоните или оставляете заявку на сайте, уточняем удобный для вас день и время для
+            выезда замерщика</p>
+        </div>
+        <div class="working__item">
+          <p class="working__numbers">2</p>
+          <p class="working__text">Составляем смету, обсуждаем объемы черновых материалов для ремонта</p>
+        </div>
+        <div class="working__item">
+          <p class="working__numbers">3</p>
+          <p class="working__text">Обсуждаем условия договора и сроки ремонта, подписываем договор</p>
+        </div>
+        <div class="working__item">
+          <p class="working__numbers">4</p>
+          <p class="working__text">Наши мастера начинают работы в соответствии с утвержденной сметой и договором</p>
+        </div>
+        <div class="working__item">
+          <p class="working__numbers">5</p>
+          <p class="working__text">Вы оплачиваете работы по ремонту по частями по мере их выполнения и принятия</p>
+        </div>
+        <div class="working__item">
+          <p class="working__numbers">6</p>
+          <p class="working__text">Сдаем отремонтированное помещение вам, подписываем акт выполненных работ
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="project">
+    <div class="container">
+      <div class="project__inner">
+        <div class="project__content">
+          <h3 class="project__title">КАЖДЫЙ ПРОЕКТ РАССМАТРИВАЕТСЯ <br>
+            В <span class="project__span">ИНДИВИДУАЛЬНОМ</span> ПОРЯДКЕ</h3>
+          <p class="project__text">Мы всегда готовы ответить на любые возникшие вопросы.
+          </p>
+          <p class="project__text"><a class="project__link" href="tel:89041370078
+"><b>Позвоните нам по телефону + 8 (904) 137-00-78
+              </b></a> <br>
+            и получите консультацию или закажите расчет стоимости ремонта</p>
+        </div>
+        <div class="about__bottom-items about__bottom-items__page">
+          <p class="modal__text modal__text-page"> <span class="modal__span">ОСТАВЬТЕ ЗАЯВКУ </span> <br>
+            на расчет стоимости ремонта</p>
+          <form class="form" action="telegram.php" method="POST">
+            <input class="input" type="text" id="" name="user_name" placeholder="Ваше имя*">
+            <input class="input" type="text" id="" name="user_phone" type="tel" placeholder="Номер телефона*">
+            <button class="input__submit" type="sumbit">Отправить заявку</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer" id="contacts">
+    <div class="container">
+      <a class="footer__link" href="tel:89041370078">+ 8 (904) 137-00-78</a>
+    </div>
+  </footer>
+
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="js/fancybox.umd.js"></script>
   <script src="js/lightbox-plus-jquery.min.js"></script>
   <script src="js/slick.min.js"></script>
   <script src="js/main.js"></script>
