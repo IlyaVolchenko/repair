@@ -168,8 +168,8 @@ body {
   padding: 2rem;
   -webkit-transition: opacity 0.25s;
   transition: opacity 0.25s;
-  width: 370px;
-  height: 397px;
+  width: 346px;
+  height: 260px;
   border-radius: 15px;
   padding: 60px 20px 40px 20px;
   text-align: center;
@@ -189,7 +189,9 @@ body {
 
 .modal__text-page {
   color: #000;
+  line-height: 35px;
   text-align: center;
+  font-size: 30px;
 }
 
 .input {
@@ -280,6 +282,7 @@ body {
 }
 
 .about__bottom-items {
+  text-align: center;
   margin-top: 47px;
   border: 1px solid #000;
   width: 390px;
@@ -554,6 +557,15 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.footer__link-page {
+  margin-top: 30px;
+  color: #333;
+}
+
+.footer__link-one {
+  margin-top: 30px;
 }
 
 @media (max-width: 1200px) {

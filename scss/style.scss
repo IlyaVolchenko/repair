@@ -45,16 +45,6 @@
     font-size: 18px;
     color: #000;
     position: relative;
-    // &::before{
-    //   content: "";
-    //   background-image: url('../images/phone.png');
-    //   width: 34px;
-    //   height: 34px;
-    //   top: 0;
-    //   left: 0;
-    //   background-repeat: no-repeat;
-    //   position: absolute;
-    // }
   }
 
   &__link {
@@ -94,8 +84,8 @@
   color: #000;
   padding: 2rem;
   transition: opacity 0.25s;
-  width: 370px;
-  height: 397px;
+  width: 346px;
+  height: 260px;
   border-radius: 15px;
   padding: 60px 20px 40px 20px;
   text-align: center;
@@ -113,7 +103,9 @@
 
     &-page {
       color: #000;
+      line-height: 35px;
       text-align: center;
+      font-size: 30px;
     }
   }
 }
@@ -198,6 +190,7 @@
     }
 
     &-items {
+      text-align: center;
       margin-top: 47px;
       border: 1px solid #000;
       width: 390px;
@@ -314,7 +307,7 @@
 .portfolio {
   padding-bottom: 60px;
 
-  &__page{
+  &__page {
     display: none;
   }
 
@@ -433,6 +426,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    &-page {
+      margin-top: 30px;
+      color: #333;
+    }
+
+    &-one {
+      margin-top: 30px;
+    }
   }
 }
 

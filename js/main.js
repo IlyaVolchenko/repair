@@ -20,17 +20,6 @@ $('.portfolio__inner').slick({
   autoplaySpeed: 2000,
 });
 
-    $('.menu__btn').on('click', function() {
-      $('.menu__list').toggleClass('menu__list--active');
-   });
-
-	$(".menu__list, a").on("click", function (event) {
-		event.preventDefault();
-		var id  = $(this).attr('href'),
-			top = $(id).offset().top;
-		$('body,html').animate({scrollTop: top}, 1000);
-	});
-
 });
 
 let modal = document.querySelector('.modal');
@@ -49,4 +38,16 @@ document.addEventListener('click', function(e){
     modalBg.classList.remove('show');
   }
 });
+
+
+    $('.menu__btn').on('click', function() {
+      $('.menu__list').toggleClass('menu__list--active');
+   });
+
+	$(".menu").on("click", "a", function (event) {
+		event.preventDefault();
+		var id  = $(this).attr('href'),
+			top = $(id).offset().top;
+		$('body,html').animate({scrollTop: top}, 1000);
+	});
 
